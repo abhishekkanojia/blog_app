@@ -6,7 +6,7 @@ ruby '2.5.1'
 gem 'rails', github: "rails/rails"
 
 
-gem "actiontext"
+gem "actiontext", require: "action_text"
 
 gem "image_processing", "~> 1.2"
 

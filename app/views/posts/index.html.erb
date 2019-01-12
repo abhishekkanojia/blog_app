@@ -1,2 +1,19 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+
+<% if @posts.present? %>
+  <h1>Posts</h1>
+  <table class="table table-bordered">
+    <thead>
+      <th>S.No</th>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Actions</th>
+    </thead>
+    <tbody>
+      <%= render @posts %>
+    </tbody>
+  </table>
+<% else %>
+  <h2>No Posts Found !!</h2>
+<% end %>
+
+<%= link_to("Add Post", new_post_path, class: 'btn btn-primary', style: "color: white;") %>
